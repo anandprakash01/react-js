@@ -1,0 +1,12 @@
+// Initial Commands :
+// npm init -y -> Creates package.json
+// npm i lodash -> Installs lodash (library name)
+// Add "type": "module" inside package.json
+
+
+// to create Project
+// npm create vite@latest
+
+
+// shorthand
+// npm create vite@latest newton-react-app -- --template react-swc
