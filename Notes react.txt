@@ -1,12 +1,15 @@
-// Initial Commands :
-// npm init -y -> Creates package.json
-// npm i lodash -> Installs lodash (library name)
-// Add "type": "module" inside package.json
+
+=> Node Project:- Initial Commands :
+    npm init -y -> Creates package.json
+    npm i lodash -> Installs lodash (library name)
+    Add "type": "module" inside package.json --> for import/export
 
 
-// to create Project
-// npm create vite@latest
-
-
-// shorthand
-// npm create vite@latest newton-react-app -- --template react-swc
+=> create Project using vite:
+    npm create vite@latest
+    npm i
+    ==> npm i looks inside the package.json file and looks for dependencies and
+    download all the library.
+    ract itself might depend on some other libraries so it downloads other libraries also.
+    ==>shorthand
+    npm create vite@latest newton-react-app -- --template react-swc
