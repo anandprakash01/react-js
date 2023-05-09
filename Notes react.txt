@@ -5,11 +5,11 @@
     Add "type": "module" inside package.json --> for import/export
 
 
-=> create Project using vite:
+=> create React Project using vite:
     npm create vite@latest
     npm i
     ==> npm i looks inside the package.json file and looks for dependencies and
     download all the library.
     ract itself might depend on some other libraries so it downloads other libraries also.
     ==>shorthand
-    npm create vite@latest newton-react-app -- --template react-swc
+    npm create vite@latest appName -- --template react-swc
