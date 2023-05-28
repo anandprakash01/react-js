@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 600px;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 2fr;
+    margin: 10px;
+}
+.box{
+    border: 1px solid rgb(255, 186, 186);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+h1{
+    color: rgb(0, 50, 107);
+    font-size: 1.3rem;
+}
+button{
+    padding: 5px;
+    background-color: rgb(141, 255, 131);
+    border-radius: 5px;
+    border: 1px solid rgb(255, 78, 24);
+    margin-top: 5px;
+}
+h3{
+    color: green;
+}

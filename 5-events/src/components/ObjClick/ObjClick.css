@@ -1,0 +1,10 @@
+.card{
+    width: 400px;
+    padding: .5rem;
+    margin:.5rem;
+    border-radius: 5px;
+}
+.card:hover{
+    background-color: #C88EA7;
+    cursor: pointer;
+}
