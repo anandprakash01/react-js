@@ -6,7 +6,7 @@ const Child = ({ count }) => {
     console.log("Child effect ran", count);
 
     return () => {
-      console.log("Child cleanup ran", count);
+      console.log("Child cleanup ran on unmounting", count);
     };
   }, []);
 
@@ -33,7 +33,7 @@ const Parent = () => {
       <button onClick={() => setAnotherCount(anotherCount + 1)}>Increment Another Count</button>
       <h2>Another Count {anotherCount}</h2>
       <hr />
-      {count < 10 && <Child count={count} />}
+      {count < 5 && <Child count={count} />}
     </main>
   );
 };
@@ -55,11 +55,12 @@ function MouseTracker() {
           y: event.clientY,
         });
       }
-
+      console.log("Mouse event handler added");
       window.addEventListener("mousemove", handleMouseMove);
 
       return () => {
         window.removeEventListener("mousemove", handleMouseMove);
+        console.log("Mouse event handler removed");
       };
     }
   }, [isEnabled]);

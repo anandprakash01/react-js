@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 
 // useState ✅
-// useEffect
-
+// useEffects
 // Side-Effect
 // 1. Changing title of the page
 // 2. Make API calls (react-query)
@@ -73,6 +72,7 @@ function MouseCoords() {
       window.addEventListener("mousemove", handleMouseMove);
 
       return () => {
+        //cleanup fun
         window.removeEventListener("mousemove", handleMouseMove);
       };
     }
@@ -134,7 +134,7 @@ function WindowSize() {
 
 /*******************************************************/
 
-function MainuseEffect() {
+function Uses() {
   return (
     <>
       <ChangeTitle />
@@ -144,4 +144,4 @@ function MainuseEffect() {
     </>
   );
 }
-export default MainuseEffect;
+export { Uses };
