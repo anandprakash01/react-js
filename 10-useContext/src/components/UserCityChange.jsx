@@ -1,13 +1,13 @@
-import { useEffect, useReducer, useRef, useState, createContext, useContext } from "react";
+import {
+  useEffect,
+  useReducer,
+  useRef,
+  useState,
+  createContext,
+  useContext,
+} from "react";
 
 import UserContext from "./UserContext";
-
-// useState 👑
-// useEffect 👑
-
-// useRef 🔥
-// useReducer 🔥
-// useContext ❤️
 
 const UserMumbai = () => {
   const setUser = useContext(UserContext);
@@ -25,7 +25,9 @@ const UserBangalore = () => {
     <>
       <div style={{ border: "2px solid #40128B", padding: "1rem" }}>
         <h3>Bangalore</h3>
-        <button onClick={() => setUser({ city: "Bangalore" })}>Update from Bangalore</button>
+        <button onClick={() => setUser({ city: "Bangalore" })}>
+          Update from Bangalore
+        </button>
       </div>
       <UserMumbai />
     </>

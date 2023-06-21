@@ -1,11 +1,11 @@
-import { useEffect, useReducer, useRef, useState, createContext, useContext } from "react";
-
-// useState 👑
-// useEffect 👑
-
-// useRef 🔥
-// useReducer 🔥
-// useContext ❤️
+import {
+  useEffect,
+  useReducer,
+  useRef,
+  useState,
+  createContext,
+  useContext,
+} from "react";
 
 const ComponentC = () => {
   const { setCount } = useContext(UserCount);
@@ -48,8 +48,8 @@ const ComponentA = () => {
  * 2. Consume a value ✅
  */
 
-/** createContext returns a Context Object */
-/** Make sure to name it in PascalCase */
+/* createContext returns a Context Object */
+/* Make sure to name it in PascalCase */
 const UserCount = createContext();
 
 // UserCount.Provider -> A React Component

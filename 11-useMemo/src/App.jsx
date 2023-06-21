@@ -1,35 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import viteLogo from "/vite.svg";
+
+import CustomHooks from "./customHooks/CustomHooks";
+import { MemoFunction } from "./UseMemo_memo/MemoFunction";
+import UseMemoHook from "./UseMemo_memo/UseMemoHook";
+import { FormHandle } from "./UseMemo_memo/FormHandle";
+import { UseCallback } from "./UseCallback/UseCallback";
+import { ModalCoponent } from "./Portal/Model";
+import ClassComponent from "./ClassComponent/ClassComponent";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Hey:)</h1>
+      {/* <CustomHooks /> */}
+      <hr />
+      {/* <MemoFunction /> */}
+      {/* <UseMemoHook /> */}
+      {/* <FormHandle /> */}
+      {/* <UseCallback /> */}
+      <hr />
+      <ModalCoponent />
+      <ClassComponent />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
