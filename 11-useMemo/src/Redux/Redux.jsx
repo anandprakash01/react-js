@@ -1,6 +1,8 @@
-// -------------------------Action creator-------------------
+import { useSelector, useDispatch } from "react-redux";
+import { combineReducers, createStore } from "redux";
 
-// ------------------------Actions---------------------------
+// -------------------------Action creator-------------------
+// Actions
 const createPolicy = (name, amount) => {
   return {
     type: "CREATE_POLICY",
@@ -27,13 +29,13 @@ const createClaim = (name, amountOfmoneyToCollect) => {
     type: "CREATE_CLAIM",
     playload: {
       name: name,
-      amountOfmoneyToCollect: amountOfmoneyToCollect,
+      amount: amountOfmoneyToCollect,
     },
   };
 };
 
 // -----------------------------------Reducers------------------------
-const claimHistory = (oldClaims, action) => {
+const claimHistory = (oldClaims = [], action) => {
   if (action.type == "CREATE_CLAIM") {
     const newClaim = action.payload;
     return [...oldClaims, newClaim];
@@ -41,26 +43,53 @@ const claimHistory = (oldClaims, action) => {
   return oldClaims;
 };
 
-const accounting = (bagOfMoney, action) => {
-  if ((action.type = "CREATE_CLAIM")) {
-    return (bagOfMoney = action.payload.amountOfmoneyToCollect);
+const accounting = (bagOfMoney = 10, action) => {
+  if (action.type == "CREATE_CLAIM") {
+    return bagOfMoney - action.payload.amount;
   }
-  if ((action.type = "CREATE_POLICY")) {
-    return (bagOfMoney = action.payload.amount);
+  if (action.type == "CREATE_POLICY") {
+    return bagOfMoney + action.payload.amount;
   }
   return bagOfMoney;
 };
 
-const policies = (listofPolicies, action) => {
-  if ((action.type = "CREATE_POLICY")) {
+const policies = (listofPolicies = [], action) => {
+  if (action.type == "CREATE_POLICY") {
     return [...listofPolicies, action.payload.name];
   }
-  if ((action.type = "DELETE_POLICY")) {
+  if (action.type == "DELETE_POLICY") {
     return listofPolicies.filter((policy) => {
-      return policy.name != action.payload.name;
+      return policy != action.payload.name;
     });
   }
   return listofPolicies;
 };
 
-const Redux = () => {};
+// -----------------combine all reducers---------------
+
+export const ourDepartment = combineReducers({
+  //key Name can be anything
+  accounting: accounting,
+  policies: policies,
+  claimHistory: claimHistory,
+});
+
+console.log(createClaim("anand", 10));
+
+const ReduxComponent = () => {
+  //dispatch
+  const dispatch = useDispatch();
+  dispatch(createPolicy("hr", 100));
+  dispatch(createPolicy("prakash", 200));
+  dispatch(createPolicy("anand", 10));
+  // dispatch(createClaim("anand", 5));
+  // dispatch(deletePolicy("hr"));
+
+  const ac = useSelector((preState) => {
+    return preState;
+  });
+  console.log(ac);
+  return <h1>REDUX</h1>;
+};
+
+export default ReduxComponent;

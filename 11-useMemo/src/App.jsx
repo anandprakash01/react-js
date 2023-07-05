@@ -8,6 +8,14 @@ import { FormHandle } from "./UseMemo_memo/FormHandle";
 import { UseCallback } from "./UseCallback/UseCallback";
 import { ModalCoponent } from "./Portal/Model";
 import ClassComponent from "./ClassComponent/ClassComponent";
+import ReduxComponent from "./Redux/Redux";
+import { Provider as ReactReduxProvider } from "react-redux";
+import { createStore } from "redux";
+import { ourDepartment } from "./Redux/Redux";
+
+const store = createStore(ourDepartment);
+
+// console.log(store.getStore());
 
 function App() {
   return (
@@ -20,8 +28,11 @@ function App() {
       {/* <FormHandle /> */}
       {/* <UseCallback /> */}
       <hr />
-      <ModalCoponent />
-      <ClassComponent />
+      {/* <ModalCoponent /> */}
+      {/* <ClassComponent /> */}
+      <ReactReduxProvider store={store}>
+        <ReduxComponent />
+      </ReactReduxProvider>
     </>
   );
 }
