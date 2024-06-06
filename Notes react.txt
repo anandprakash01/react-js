@@ -1,15 +1,15 @@
 =>  Node version Manage:
     download "Node Version Manager" -nvm
     nvm --version
-    nvm install (node version)      //-> nvm install 14.17.0
+    nvm install <node version>      //-> nvm install 14.17.0
     nvm list
-    nvm use (node version)
+    nvm use <node version>
         To update version=> nvm install node --reinstall-packages-from=node
 
 
 => Node Project:- Initial Commands :
     npm init -y -> Creates package.json
-    npm i (library name) -> Installs libraries 
+    npm i (library name) -> Installs libraries `
     Add "type": "module" inside package.json --> for import/export
 
 
