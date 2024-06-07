@@ -21,3 +21,16 @@
     ract itself might depend on some other libraries so it downloads other libraries also.
     ==>shorthand
     npm create vite@latest appName -- --template react-swc
+
+
+--------------------:REACT:------------------
+
+JSX expression :-> jsx expression is just a curly breaces{} within jsx
+
+Props:
+    Props are arguments passed into React components.
+    Props are passed to components via HTML attributes.
+    Just like you pass an argument to a function you can pass prop to Components
+    Biggest advantage of props is to RE-USE Components
+
+    
