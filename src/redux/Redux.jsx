@@ -22,9 +22,9 @@ const Redux = () => {
         <>
             <h2>Redux</h2>
             <div>
-                <p>{name}</p>
-                <p>{email}</p>
-                <p>{count}</p>
+                <div>{name}</div>
+                <div>{email}</div>
+                <div>{count}</div>
                 <button
                     onClick={() => {
                         dispatch(increment(10));

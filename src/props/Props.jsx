@@ -29,9 +29,9 @@ const User = props => {
 
     return (
         <div>
-            <p>{user.name}</p>
-            <p>{user.age}</p>
-            <p>{user.email}</p>
+            <div>{user.name}</div>
+            <div>{user.age}</div>
+            <div>{user.email}</div>
         </div>
     );
 };

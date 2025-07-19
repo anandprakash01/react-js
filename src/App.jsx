@@ -11,6 +11,10 @@ import UseReducerHook from "./useReducer";
 import UseRefHook from "./useRef/UseRefHook.jsx";
 import UseContextHook from "./useContext/UseContextHook.jsx";
 import {ThemeProvider} from "./useContext/ThemeContext.jsx";
+import MemoFun from "./useMemo";
+import Modal from "./modal/Modal.jsx";
+import ClassComponent from "./class/ClassComponent.jsx";
+import Routing from "./routing/Routing.jsx";
 
 function App() {
     return (
@@ -27,6 +31,10 @@ function App() {
             <ThemeProvider>
                 <UseContextHook />
             </ThemeProvider>
+            <MemoFun />
+            <Modal />
+            <ClassComponent />
+            <Routing />
         </>
     );
 }

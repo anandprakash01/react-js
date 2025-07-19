@@ -8,11 +8,14 @@ const UseContextHook = () => {
     const {theme, toggleTheme} = useContext(ThemeContext);
 
     return (
-        <div style={{background: theme}}>
-            <h2>useContext Hook</h2>
-            <p>{theme}</p>
-            <button onClick={toggleTheme}>Change Theme</button>
-        </div>
+        <>
+            <div style={{background: theme}}>
+                <h2>useContext Hook</h2>
+                <p>{theme}</p>
+                <button onClick={toggleTheme}>Change Theme</button>
+            </div>
+            <hr />
+        </>
     );
 };
 

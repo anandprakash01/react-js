@@ -105,12 +105,12 @@ function APIs() {
     }
 
     return (
-        <main>
+        <main style={{display: "flex", gap: "1rem", flexWrap: "wrap"}}>
             {/* optional chaining */}
             {/* {users?.id} */}
 
             {state.users.map((user, i) => (
-                <p key={i}>{user.name}</p>
+                <div key={i}>{user.name}, </div>
             ))}
         </main>
     );
